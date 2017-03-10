@@ -39,5 +39,5 @@ elasticsearch更新到5.x版本后，都需要用JDK8。本来是件忒简单的
 
     ln -s /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java /etc/alternatives/java
     
-有人可能会说，你这步骤不直接装要多啊。但是其实只需要执行不走4, 5两步。新装vps的source list你总是要配置的。 
+有人可能会说，你这步骤比直接装要多啊。但是其实只需要执行3, 4, 5。新装vps的source list你总是要配置的。 
     
