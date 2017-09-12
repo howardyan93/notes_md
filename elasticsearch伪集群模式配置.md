@@ -75,9 +75,8 @@ master的配置直接网上找了一个来改：
 
 这个时候访问[web接口](http://127.0.0.1:9200/_cluster/health), 就能看到已经有一个master节点和一个node节点在线了。
 
-如果是集群想要充分挖掘机器性能，也可以如法炮制。如果恰好shard和replica都分配在这台机器的master和node上，遇到机器挂了，会有数据丢失的风险，所以还需要设置好shard和replica的分配。
+如果是集群想要充分挖掘机器性能，也可以如法炮制。如果恰好shard和replica都分配在这台机器的master和node上，遇到机器挂了，会有数据丢失的风险，所以还需要设置好shard和replica的分配。在官网上有[指导](https://www.elastic.co/guide/cn/elasticsearch/guide/current/heap-sizing.html)
 
-
-    
+    cluster.routing.allocation.same_shard.host: true
 
     
