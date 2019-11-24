@@ -8,7 +8,7 @@ nim语言上手指南
 ### nim的安装
 首先去[官网](https://nim-lang.org/)看了一下安装过程。其实自己用的debian10上用apt也能够安装，但是版本不是最新的。这里我选择了直接下载压缩包，手动安装。
 
-    wget https://nim-lang.org/download/nim-1.0.2-linux_x64.tar.xz)
+    wget https://nim-lang.org/download/nim-1.0.2-linux_x64.tar.xz
 
 下载完成后解压到某个目录，然后在.bashrc里添加环境变量:
 
