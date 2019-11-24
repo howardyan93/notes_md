@@ -14,8 +14,6 @@ nim语言上手指南
 
     export PATH=$PATH:/data/tools/nim-1.0.2/bin
 
-基本上就安装完成了
-
 
 ### 包的管理
 
@@ -58,7 +56,6 @@ nim也可以实现脚本执行，但是需要安装包。搜索了一下，发�
 
     #!/usr/bin/env nimr
 
-即可。
 
 ### nim的学习资源
 
