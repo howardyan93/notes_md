@@ -9,7 +9,7 @@
 
 除了nu6master1配置了256G的SSD之外，其他的机器配置1T的5400转的笔记本硬盘。
 
-然后按clickhouse的观望，配置apt源，然后下载：
+然后按clickhouse的官网，配置apt源，然后下载：
 
     sudo apt-get install dirmngr
     sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv E0C56BD4
@@ -19,7 +19,7 @@
 
     sudo apt-get install -y clickhouse-server clickhouse-client
 
-但是遇到一个奇葩的问题，家里的联通网访问下载速度及其慢。每天机器安装玩估计都要6个小时！
+但是遇到一个奇葩的问题，家里的联通网访问下载速度及极其慢。每天机器安装完估计都要6个小时！
 
 当我用意外手机做热点的时候，发现下载速度就很快，几分钟搞定。然而4台机器，如果都要用手机搞，实在是太累了(你能想象用ssh进去然后配置wifi么？)。最好的办法就是下载deb包到本地，然后用apt安装。
 
@@ -62,7 +62,7 @@
 
     /etc/init.d/nginx restart
 
-这个时候浏览器访问nuc6mater1的ip，显示nginx默认页面就说明修改成功。然后继续访问http://nuc6master1/debs/，就能看到文件层级目录。
+这个时候浏览器访问nuc6mater1的地址，显示nginx默认页面就说明修改成功。然后继续访问http://nuc6master1/debs/，就能看到文件层级目录。
 
 然后把所有的clickhouse的deb包拷贝到/var/www/html/debs/clickhouse/下载。然后运行:
 
@@ -73,7 +73,7 @@ dpkg-scanpackages后面为啥要接/dev/null，我也没功夫研究，直接照
 
     apt install dpkg-dev
 
-到目前位置私有deb原就搭建完成了，用浏览器访问对应的地址，如果显示正常就说明没啥问题。
+到目前位置私有deb源就搭建完成了，用浏览器访问对应的地址，如果显示正常就说明没啥问题。
 
 最后配置apt的sourcelist。
 
@@ -110,4 +110,6 @@ dpkg-scanpackages后面为啥要接/dev/null，我也没功夫研究，直接照
     /etc/init.d/clickhouse-server restart
 
 然后就可以用密码登录了。
+
+自此安装大功告成。
 
